@@ -4,21 +4,19 @@ require "espressione"
 
 # validate simple email
 email = 'joe@doe.com'
-puts "Valid E-mail" if email =~ Espressione::EMAIL
+puts "Contains a valid e-mail" if email =~ Espressione::EMAIL
 
 # validate url
 url = "https://github.com/dvinciguerra"
-puts "Valid Url" if url =~ Espressione::URL
+puts "Contains a valid url" if url =~ Espressione::URL
 
 # validate a uuid
 uuid = '8539ad20-317e-0137-4c89-7aa46e47cfb4'
-puts "Valid UUID" if uuid =~ Espressione::UUID
+puts "Contains a valid uuid" if uuid =~ Espressione::UUID
 
 # validate a datetime
-datetime = Time.now
-# require "byebug"; debugger
-puts datetime
-puts "Valid DateTime" if datetime =~ Espressione::DATETIME
+datetime = Time.now.utc
+puts "Contains a valid datetime" if datetime.to_s =~ Espressione::DATETIME
 
 
 
