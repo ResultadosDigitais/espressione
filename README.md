@@ -1,5 +1,8 @@
 # Espressione
 
+[![Maintainability](https://api.codeclimate.com/v1/badges/7b9cf8b8ff2f56e6da36/maintainability)](https://codeclimate.com/github/dvinciguerra/espressione/maintainability)
+[![Test Coverage](https://api.codeclimate.com/v1/badges/7b9cf8b8ff2f56e6da36/test_coverage)](https://codeclimate.com/github/dvinciguerra/espressione/test_coverage)
+
 Espressione is a ruby gem to provide useful regex patterns.
 
 ## Installation
