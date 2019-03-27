@@ -1,5 +1,16 @@
+# frozen_string_literal: true
+
 require "bundler/setup"
 require "espressione"
+
+exit unless ENV["ESPRESSIONE_ENV"] == "test"
+
+if ENV["COVERAGE"]
+  require "simplecov"
+  SimpleCov.start do
+    add_filter %r{^/spec/}
+  end
+end
 
 RSpec.configure do |config|
   # Enable flags like --only-failures and --next-failure
