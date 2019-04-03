@@ -1,6 +1,5 @@
 # frozen_string_literal: true
 
-require "espressione/version"
 require "espressione/regex"
 
 module Espressione
