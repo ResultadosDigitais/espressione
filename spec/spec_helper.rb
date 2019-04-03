@@ -2,7 +2,9 @@
 
 require "bundler/setup"
 
+require "faker"
 require "simplecov"
+
 require "espressione"
 
 if ENV["COVERAGE"]

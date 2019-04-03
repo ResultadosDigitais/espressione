@@ -50,4 +50,24 @@ RSpec.describe Espressione::Regex::DateTime do
       end
     end
   end
+
+  describe "TIME" do
+    let(:time) { Time.now.strftime("%H:%M:%S") }
+
+    context "when valid" do
+      it "matches format hh:mm:ss" do
+        expect(time).to match Espressione::TIME
+      end
+    end
+
+    context "when invalid" do
+      it "doesnt match nil values" do
+        expect(nil).not_to match Espressione::DATE
+      end
+
+      it "doesnt match empty format" do
+        expect("").not_to match Espressione::DATE
+      end
+    end
+  end
 end
