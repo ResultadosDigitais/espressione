@@ -1,18 +1,13 @@
 # frozen_string_literal: true
 
+require 'rubygems'
 require "bundler/setup"
 
-require "faker"
 require "simplecov"
+SimpleCov.start
 
+require "faker"
 require "espressione"
-
-if ENV["COVERAGE"]
-  SimpleCov.start do
-    add_filter '/spec/'
-    track_files 'lib/**/*.rb'
-  end
-end
 
 RSpec.configure do |config|
   # Enable flags like --only-failures and --next-failure
