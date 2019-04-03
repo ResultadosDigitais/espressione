@@ -29,24 +29,26 @@ require "espressione"
 
 # validate simple email
 email = 'joe@doe.com'
-puts "Contains a valid e-mail" if email =~ Espressione::EMAIL
+puts "Contains a valid e-mail" if Espressione::EMAIL.match(email)
 
 # validate url
 url = "https://github.com/dvinciguerra"
-puts "Contains a valid url" if url =~ Espressione::URL
+puts "Contains a valid url" if  Espressione::URL.match(url)
 
 # validate a uuid
 uuid = '8539ad20-317e-0137-4c89-7aa46e47cfb4'
-puts "Contains a valid uuid" if uuid =~ Espressione::UUID
+puts "Contains a valid uuid" if Espressione::UUID.match(uuid)
 
 # validate a datetime
 datetime = Time.now.utc
-puts "Contains a valid datetime" if datetime.to_s =~ Espressione::DATETIME
+puts "Contains a valid datetime" if Espressione::DATETIME.match(datetime.to_s)
+
+# validate a ip
+ip = '192.168.1.1'
+puts "Contains a valid ip" if Espressione::IP.match(ip)
 ```
 
 ## Development
-
-After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake spec` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
 
 To install this gem onto your local machine, run `bundle exec rake install`. To release a new version, update the version number in `version.rb`, and then run `bundle exec rake release`, which will create a git tag for the version, push git commits and tags, and push the `.gem` file to [rubygems.org](https://rubygems.org).
 
