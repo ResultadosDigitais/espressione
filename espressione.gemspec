@@ -8,10 +8,11 @@ require "espressione"
 Gem::Specification.new do |spec|
   spec.name          = "espressione"
   spec.version       = Espressione::VERSION
+  spec.license       = 'MIT'
   spec.authors       = ["Daniel Vinciguerra"]
   spec.email         = ["daniel.vinciguerra@resultadosdigitais.com.br"]
 
-  spec.summary       = "Espressione is a Ruby community-driven common regular expression patterns gem"
+  spec.summary       = "Ruby community-driven common regular expressions"
   spec.description   = "Espressione is a Ruby community-driven common regular expression patterns gem"
   spec.homepage      = "https://github.com/dvinciguerra/espressione"
 
