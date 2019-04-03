@@ -9,6 +9,6 @@ module Espressione
     DATE = /^\d{4}-\d{2}-\d{2}$/.freeze
 
     # time pattern
-    TIME = /^\d{4}-\d{2}-\d{2}$/.freeze
+    TIME = /^\d{1,2}:\d{1,2}:\d{1,2}$/.freeze
   end
 end
