@@ -1,14 +1,14 @@
 # frozen_string_literal: true
 
 require "bundler/setup"
+
+require "simplecov"
 require "espressione"
 
-exit unless ENV["ESPRESSIONE_ENV"] == "test"
-
 if ENV["COVERAGE"]
-  require "simplecov"
   SimpleCov.start do
-    add_filter %r{^/spec/}
+    add_filter '/spec/'
+    track_files 'lib/**/*.rb'
   end
 end
 
