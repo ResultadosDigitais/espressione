@@ -3,9 +3,9 @@
 require "espressione/regex"
 
 module Espressione
-  VERSION = "0.1.0"
+  VERSION = "0.2.0"
 
-  include Espressione::Regex::ID
-  include Espressione::Regex::DateTime
-  include Espressione::Regex::Internet
+  extend Espressione::Regex::ID
+  extend Espressione::Regex::DateTime
+  extend Espressione::Regex::Internet
 end
