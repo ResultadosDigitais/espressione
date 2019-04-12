@@ -15,7 +15,7 @@ module Espressione
 
     # time pattern
     def time
-      @time = /^\d{1,2}:\d{1,2}:\d{1,2}$/.freeze
+      @time ||= /^\d{1,2}:\d{1,2}:\d{1,2}$/.freeze
     end
   end
 end
