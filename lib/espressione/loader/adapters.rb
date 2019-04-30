@@ -30,7 +30,7 @@ module Espressione::Loader
       extension = File.extname(filename)
       return false if extension.empty?
 
-      extension.delete_prefix('.').to_sym
+      extension.delete('.').to_sym
     end
   end
 
