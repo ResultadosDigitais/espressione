@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    espressione (0.2.0)
+    espressione (0.3.0)
 
 GEM
   remote: https://rubygems.org/
