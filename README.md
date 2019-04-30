@@ -25,8 +25,39 @@ Or install it yourself as:
 
 ## Usage
 
+You can import your set of expressions directly from the [YAML](https://yaml.org/) file.
+
+```yaml
+# In phone.yml
+local: '\(?[0-9]{2,3}\)? ?[0-9]{3,4}[ -]?[0-9]{4}'
+international: '\+[0-9]{2}? \(?[0-9]{2,3}\)? ?[0-9]{3,4}[ -]?[0-9]{4}'
+```
+
 ```ruby
 require "espressione"
+
+Espressione.load "phone.yml", prefix: :phone
+
+Espressione.phone_local # => /\(?[0-9]{2,3}\)? ?[0-9]{3,4}[ -]?[0-9]{4}/
+Espressione.phone_international # => /\+[0-9]{2}? \(?[0-9]{2,3}\)? ?[0-9]{3,4}[ -]?[0-9]{4}/
+```
+
+
+Or you can use our standard set of expressions:
+
+[datetime](#datetime),
+[date](#date),
+[time](#time),
+[uuid](#uuid),
+[ip](#ip),
+[ipv6](#ipv6),
+[url](#url),
+[email](#email),
+[subdomain](#subdomain),
+[html_tag](#html_tag)
+
+
+```ruby
 
 # validate simple email
 email = 'joe@doe.com'
@@ -47,6 +78,66 @@ puts "Contains a valid datetime" if Espressione.datetime.match(datetime.to_s)
 # validate a ip
 ip = '192.168.1.1'
 puts "Contains a valid ip" if Espressione.ip.match(ip)
+```
+
+### datetime
+
+```ruby
+  Espressione.datetime.match("2019-04-30 18:37:07 UTC")
+```
+
+### date
+
+```ruby
+  Espressione.date.match("2019-04-30")
+```
+
+### time
+
+```ruby
+  Espressione.time.match("10:01:12")
+```
+
+### uuid
+
+```ruby
+  Espressione.uuid.match("8539ad20-317e-0137-4c89-7aa46e47cfb4")
+```
+
+### ip
+
+```ruby
+  Espressione.ip.match("127.0.0.1")
+```
+
+### ipv6
+
+```ruby
+  Espressione.ipv6.match("2001:0db8:85a3:0000:0000:8a2e:0370:7334")
+```
+
+### url
+
+```ruby
+  Espressione.url.match("https://github.com/dvinciguerra")
+```
+
+### email
+
+```ruby
+  Espressione.email.match("joe@doe.com")
+```
+
+### subdomain
+
+```ruby
+  Espressione.subdomain.match("shipit.resultadosdigitais.com.br")
+```
+
+### html_tag
+
+```ruby
+  Espressione.html_tag.match("<body>")
 ```
 
 ## Development
