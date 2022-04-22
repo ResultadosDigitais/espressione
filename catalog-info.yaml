@@ -1,0 +1,11 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: espressione
+  description: Gema que fornece padrões regex úteis.
+  annotations:
+    github.com/project-slug: ResultadosDigitais/espressione
+spec:
+  type: service
+  owner: devtools
+  lifecycle: production 
