@@ -4,8 +4,9 @@ metadata:
   name: espressione
   description: Gema que fornece padrões regex úteis.
   annotations:
+    circleci.com/project-slug: github/ResultadosDigitais/espressione
     github.com/project-slug: ResultadosDigitais/espressione
 spec:
-  type: service
+  type: library
   owner: devtools
   lifecycle: production 
